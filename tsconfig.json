@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",                        // Define o alvo de saída para ES5 para compatibilidade
+    "module": "esnext",                    // CommonJS para compatibilidade com Rollup
+    "declaration": true,                     // Gera arquivos .d.ts para exportação de tipagens
+    "declarationMap": true,                  // Gera sourcemaps para arquivos de declaração
+    "sourceMap": true,                       // Gera sourcemaps para o código JavaScript
+    "outDir": "dist",                        // Define o diretório de saída para o build
+    "strict": true,                          // Ativa verificações de tipo rigorosas
+    "moduleResolution": "node",              // Usa resolução de módulo Node.js para importações
+    "esModuleInterop": true,                 // Habilita interoperação com módulos ES
+    "skipLibCheck": true,                    // Ignora checagem de tipo em arquivos de declaração de bibliotecas
+    "forceConsistentCasingInFileNames": true, // Exige consistência em nomes de arquivos
+    "allowSyntheticDefaultImports": true,    // Permite importação de default em módulos que não possuem export default
+    "resolveJsonModule": true,               // Permite a importação de arquivos JSON
+    "isolatedModules": true                  // Cada arquivo é tratado como módulo independente (necessário para Rollup)
+  },
+  "include": [
+    "src/**/*.ts"                            // Inclui todos os arquivos TypeScript do diretório src
+  ],
+  "exclude": [
+    "node_modules",                          // Exclui node_modules para evitar conflitos de tipagem
+    "dist"                                   // Exclui diretório de saída para evitar recompilação de build
+  ]
+}
