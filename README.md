@@ -40,15 +40,14 @@ client.get('/users')
   });
 ```
 
-## Configuração de Interceptores
-O pacote também permite configurar interceptores para logar ou manipular requisições e respostas antes de serem processadas:
+## Configuração de Interceptor para Log de Requisições
+O pacote permite configurar um interceptor para registrar todas as requisições e respostas em um serviço de monitoramento. O interceptor envia logs detalhados sobre cada requisição e resposta, incluindo cabeçalhos, status, corpo da resposta e outros dados relevantes.
 
 ```typescript
 import { Interceptor } from 'http-client-sdk';
 
 const interceptor = new Interceptor({ endpoint: 'https://logging.api/trace' });
 const client = new HttpClient({ interceptor });
-// Agora, as requisições e respostas serão logadas automaticamente.
 ```
 
 ## Como Funciona
